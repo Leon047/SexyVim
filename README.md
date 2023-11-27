@@ -17,14 +17,40 @@ This README provides documentation for the Vundle Vim configuration provided in 
 
 ## Installation
 
-1. Make sure you have Vundle installed in your Vim setup. If not, follow the instructions to install it:
-
+1. Inasll Vim
   ```bash
-   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  sudo apt install vim
   ```
-2. Copy the contents of the provided .vimrc file and paste it into your ~/.vimrc file.
 
-3. Launch Vim and run :PluginInstall to install all the plugins specified in the configuration.
+2. Get vimrc
+  ```bash
+  git clone https://github.com/Leon047/SexyVim.git && mv SexyVim/.vimrc ~/ && rm -rf SexyVim 
+  ```
+
+3. Swaps and backups (optional)
+  ```bash
+  mkdir ~/.vim/sessions
+  ```
+
+4. Support virtualenv (optional) for use 'virtualenvwrapper'. 
+  ```bash
+  mkdir ~/.virtualenvs
+  ```
+
+5. Add Vundle 
+  ```bash
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  ```
+
+6. Majutsushi/tagbar
+  ```bash
+  sudo apt install exuberant-ctags
+  ```
+
+7. Launch Vim and run ':' to install all the plugins specified in the configuration.
+  ```bash
+  PluginInstall
+  ```
 
 ## Plugin List
 This configuration uses several plugins managed by Vundle to enhance your Vim experience:
@@ -57,8 +83,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * syntastic (scrooloose/syntastic): Provides syntax checking for various languages.
 * vim-commentary (tpope/vim-commentary): Helps comment/uncomment code.
 * vim-sparkup (mitsuhiko/vim-sparkup): Offers support for Sparkup (XML/jinja/html-django, etc.).
-* vimerl (jimenezrick/vimerl): Erlang plugin for Vim.
-* alchemist.vim (slashmili/alchemist.vim): Provides Elixir support for Vim.
 * css.vim (JulesWang/css.vim): Offers CSS syntax highlighting.
 * vim-less (groenewege/vim-less): Provides syntax for LESS (dynamic CSS).
 * vim-javascript (pangloss/vim-javascript): Improves JavaScript indentation and syntax support.
@@ -73,8 +97,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * vim-python-pep8-indent (hynek/vim-python-pep8-indent): Provides PEP8 indentation.
 * vim-virtualenv (jmcantrell/vim-virtualenv): Offers Virtualenv support in Vim.
 * vim-cython (tshirtman/vim-cython): Adds Cython support.
-* vim-terraform (hashivim/vim-terraform): Provides Terraform syntax highlight.
-* vim-terraform-completion (juliosueiras/vim-terraform-completion): Adds Terraform auto-completion.
 * Dockerfile.vim (ekalinin/Dockerfile.vim): Provides syntax highlighting for Dockerfiles.
 * vim-docker-tools (kkvh/vim-docker-tools): Offers Docker-tools.
 
@@ -95,7 +117,7 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 
 ## Additional Settings
 * The .vimrc file contains various settings for syntax highlighting, code navigation, and other features.
-* Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML, Terraform, and more languages are supported with specific settings.
+* Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML and more languages are supported with specific settings.
 * Airline theme is set to powerlineish.
 * Indentation settings are defined for different filetypes.
 * Various mappings for easier movement, saving, and navigating between buffers and splits are provided.

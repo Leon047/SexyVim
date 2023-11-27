@@ -1,10 +1,9 @@
-"                           --- 𝕍 𝕚𝕞  ---
+"                           --- SexyVim ---
 
 
-" --- Vundle settings ----------------------------------------------------------
+" --- Vundle settings ---
 
 " Set the runtime path to include Vundle and initialize
-" HINT: PluginInstall / PluginUpdate / PluginClean
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -21,7 +20,7 @@ Plugin 'vim-airline/vim-airline'                " Lean & mean status/tabline for
 Plugin 'vim-airline/vim-airline-themes'         " Themes for vim-airline
 Plugin 'rosenfeld/conque-term'                  " Consoles as buffers
 Plugin 'tpope/vim-surround'                     " Parentheses, brackets, quotes, XML tags, and more
-Plugin 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'                    " Display vertical lines
 Plugin 'turbio/bracey.vim'                      " LivePreview for html, css, js (install - nodejs, npm)
 Plugin 'matze/vim-move'                         " Moving text
 
@@ -35,12 +34,6 @@ Plugin 'honza/vim-snippets'                     " Snippets repo
 Plugin 'scrooloose/syntastic'                   " Syntax checking plugin for Vim
 Plugin 'tpope/vim-commentary'                   " Comment stuff out
 Plugin 'mitsuhiko/vim-sparkup'                  " Sparkup (XML/jinja/htlm-django/etc.) support
-
-" Erlang 
-Plugin 'jimenezrick/vimerl'                     " The Erlang plugin for Vim
-
-" Elixir 
-Plugin 'slashmili/alchemist.vim'                " Elixir support for vim
 
 " CSS 
 Plugin 'JulesWang/css.vim'                      " CSS syntax file
@@ -66,24 +59,20 @@ Plugin 'hynek/vim-python-pep8-indent'           " *PEP8 indent
 Plugin 'jmcantrell/vim-virtualenv'              " Virtualenv support in VIM
 Plugin 'tshirtman/vim-cython'                   " Cython support   
 
-" Terraform 
-Plugin 'hashivim/vim-terraform'                 " Terraform syntax highlight
-Plugin 'juliosueiras/vim-terraform-completion'  " Terraform auto-completion
-
 " Docker 
 Plugin 'ekalinin/Dockerfile.vim'                " Syntax for Dockerfile
 Plugin 'kkvh/vim-docker-tools'                  " Docker-tools
 
-call vundle#end() " required
+call vundle#end()   " Required
 filetype on
 filetype plugin on
 filetype plugin indent on
 
 
-" --- Plagin settings ----------------------------------------------------------
+" --- Plagin settings ---
 
 " NERDTree 
-nmap <F1> <nop>                 " unmap <F1> with help
+nmap <F1> <nop>                 " unmap F1 with help
 map <F1> :NERDTreeToggle<CR>    " browse the list of files in the current directory
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\. txt$','\.o$']
 let NERDTreeShowHidden=1
@@ -144,7 +133,7 @@ let g:syntastic_style_warning_symbol = 'x'
 let g:airline_theme='powerlineish'
 
 " Yggdroot/indentLine
-let g:indentLine_char = '¦'   "['|', '¦', '┆', '┊'] 
+let g:indentLine_char = '¦'   " ['|', '¦', '┆', '┊'] 
 let g:indentLine_color_term = 239
 let g:indentLine_color_tty_dark = 1
 
@@ -156,11 +145,14 @@ nmap <C-Down> <Plug>MoveLineDown
 nmap <C-Up> <Plug>MoveLineUp
 
 
-" --- General settings ---------------------------------------------------------
+" --- General settings ---
 
 set backspace=indent,eol,start
 
 " Auto save 
+set updatetime=5000  " Autosaving with a 5-second interval.
+
+" Autosaving the file upon cursor inactivity (CursorHold) or in insert mode inactivity (CursorHoldI)
 autocmd CursorHold,CursorHoldI * update
 
 " Increase story size
@@ -197,10 +189,8 @@ if has("gui_running")
 endif
 set ttyfast
 
-" Enable Syntax Colors
-" in GUI mode we go with fruity and Monaco 13
-" in CLI mode myterm looks better (fruity is GUI only)
-tab sball
+" Work with buffers
+:tab sball
 set switchbuf=useopen
 
 " Use system clipboard
@@ -248,7 +238,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=238
 
 
-" --- Color Settings -----------------------------------------------------------
+" --- Color Settings ---
 
 " Comments
 hi Comment ctermfg=585 
@@ -266,7 +256,7 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 hi Visual  ctermbg=238 guibg=Grey40 gui=none
 
 
-" --- Python-mode settings -----------------------------------------------------
+" --- Python-mode settings ---
 
 let g:pymode_rope = 0
 
@@ -325,7 +315,7 @@ autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 \ smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 
-" --- Languages support --------------------------------------------------------
+" --- Languages support ---
 
 " C/C++/C# 
 autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
@@ -384,14 +374,6 @@ autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufNewFile,BufRead *.sls setlocal ft=yaml
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
-" Terraform 
-let g:syntastic_terraform_tffilter_plan = 1
-let g:terraform_completion_keys = 0
-let g:terraform_registry_module_completion = 0
-
-" Cmake support 
-autocmd BufNewFile,BufRead CMakeLists.txt setlocal ft=cmake
-
 " TXT 
 autocmd BufRead,BufNewFile *.txt set filetype=txt
 autocmd FileType txt setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
@@ -408,7 +390,7 @@ autocmd FileType conf setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
 
 
-" --- User hotkeys -------------------------------------------------------------
+" --- User hotkeys ---
 
 " Easier moving of code blocks
 vnoremap < <gv " Shift+> keys
