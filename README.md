@@ -70,7 +70,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * conque-term (rosenfeld/conque-term): Allows using consoles as buffers.
 * vim-surround (tpope/vim-surround): Helps with working with parentheses, brackets, quotes, XML tags, and more.
 * indentLine (Yggdroot/indentLine): Adds indent guides.
-* bracey.vim (turbio/bracey.vim): Provides live preview for HTML, CSS, and JS.
 * vim-move (matze/vim-move): Facilitates moving text.
 
 ### Snippets Support
@@ -83,6 +82,7 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * syntastic (scrooloose/syntastic): Provides syntax checking for various languages.
 * vim-commentary (tpope/vim-commentary): Helps comment/uncomment code.
 * vim-sparkup (mitsuhiko/vim-sparkup): Offers support for Sparkup (XML/jinja/html-django, etc.).
+* vim-json (elzr/vim-json): Distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing.
 * css.vim (JulesWang/css.vim): Offers CSS syntax highlighting.
 * vim-less (groenewege/vim-less): Provides syntax for LESS (dynamic CSS).
 * vim-javascript (pangloss/vim-javascript): Improves JavaScript indentation and syntax support.
@@ -107,9 +107,12 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * F4: Aligns indents in the current code.
 * F5: Opens ConqueTerm split for running Python scripts.
 * F6: Saves and performs Syntastic syntax checking.
-* F7: Opens ConqueTerm split to run Python3 scripts.
-* F8: Opens Bracey live preview.
+* F7: Opens ConqueTerm split to run Python3 Interpreter.
+* F8: Autofix PEP8 errors
 * Ctrl+Space: Activates autocompletion.
+* Ctrl+z: Undo, Crtl+r: Redu
+* CTRL-s: saving, also in Insert mode.
+* CTRL-a: Is select all.
 * Ctrl+j, Ctrl+k, Ctrl+i, Ctrl+l: Easier navigation between splits.
 * Alt+s, Alt+v: Creates horizontal and vertical splits.
 * Alt+j, Alt+k, Alt+i, Alt+l: Changes size of splits.
@@ -117,7 +120,7 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 
 ## Additional Settings
 * The .vimrc file contains various settings for syntax highlighting, code navigation, and other features.
-* Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML and more languages are supported with specific settings.
+* Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML, JSON and more languages are supported with specific settings.
 * Airline theme is set to powerlineish.
 * Indentation settings are defined for different filetypes.
 * Various mappings for easier movement, saving, and navigating between buffers and splits are provided.
