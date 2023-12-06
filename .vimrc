@@ -21,7 +21,6 @@ Plugin 'tmhedberg/SimpylFold'                   " Code Folding
 " Other 
 Plugin 'vim-airline/vim-airline'                " Lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline-themes'         " Themes for vim-airline
-Plugin 'rosenfeld/conque-term'                  " Consoles as buffers
 Plugin 'tpope/vim-surround'                     " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'Yggdroot/indentLine'                    " Display vertical lines
 Plugin 'matze/vim-move'                         " Moving text
@@ -57,8 +56,6 @@ Plugin 'idanarye/breeze.vim'                    " Html navigation like vim-easym
 Plugin 'davidhalter/jedi-vim'                   " Awesome Python autocompletion with VIM
 Plugin 'klen/python-mode'                       " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
 Plugin 'mitsuhiko/vim-jinja'                    " Jinja support for vim
-Plugin 'mitsuhiko/vim-python-combined'          " *Combined Python 2/3 for Vim
-Plugin 'hynek/vim-python-pep8-indent'           " *PEP8 indent
 Plugin 'jmcantrell/vim-virtualenv'              " Virtualenv support in VIM
 Plugin 'tshirtman/vim-cython'                   " Cython support   
 
@@ -103,19 +100,8 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
-" ConqueTerm 
-" Run python3 scripts 
-nnoremap <F7> :ConqueTermSplit python3<CR>  
-
-" PEP8
-" Disable PEP8 style indentation for Python files
-autocmd FileType python let g:python_pep8_indent = 0
-
-" Map the action to F8
-map <F8> :set g:python_pep8_indent=0<CR>
-
 " Python code check on PEP8
-autocmd FileType python map <buffer> <leader> <F9> :PymodeLint<CR>
+autocmd FileType python map <buffer> <leader> <F8> :PymodeLint<CR>
 
 " SnipMate 
 let g:snippets_dir = "~/.vim/bundle/vim-snippets/snippets"
@@ -191,10 +177,6 @@ if has("gui_running")
     set cursorline
 endif
 set ttyfast
-
-" Work with buffers
-:tab sball
-set switchbuf=useopen
 
 " Use system clipboard
 set clipboard=unnamedplus

@@ -67,7 +67,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 ### Other
 * vim-airline (vim-airline/vim-airline): Provides a status/tabline for Vim.
 * vim-airline-themes (vim-airline/vim-airline-themes): Offers themes for vim-airline.
-* conque-term (rosenfeld/conque-term): Allows using consoles as buffers.
 * vim-surround (tpope/vim-surround): Helps with working with parentheses, brackets, quotes, XML tags, and more.
 * indentLine (Yggdroot/indentLine): Adds indent guides.
 * vim-move (matze/vim-move): Facilitates moving text.
@@ -93,8 +92,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * jedi-vim (davidhalter/jedi-vim): Enhances Python autocompletion in Vim.
 * python-mode (klen/python-mode): Adds Python support, including PyLint, Rope, Pydoc, breakpoints.
 * vim-jinja (mitsuhiko/vim-jinja): Adds Jinja support for Vim.
-* vim-python-combined (mitsuhiko/vim-python-combined): Combined Python 2/3 support for Vim.
-* vim-python-pep8-indent (hynek/vim-python-pep8-indent): Provides PEP8 indentation.
 * vim-virtualenv (jmcantrell/vim-virtualenv): Offers Virtualenv support in Vim.
 * vim-cython (tshirtman/vim-cython): Adds Cython support.
 * Dockerfile.vim (ekalinin/Dockerfile.vim): Provides syntax highlighting for Dockerfiles.
@@ -107,8 +104,7 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * F4: Aligns indents in the current code.
 * F5: Opens ConqueTerm split for running Python scripts.
 * F6: Saves and performs Syntastic syntax checking.
-* F7: Opens ConqueTerm split to run Python3 Interpreter.
-* F8: Autofix PEP8 errors
+* F8: Python code check on PEP8
 * Ctrl+Space: Activates autocompletion.
 * Ctrl+z: Undo, Crtl+r: Redu
 * CTRL-s: saving, also in Insert mode.
@@ -116,7 +112,6 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * Ctrl+j, Ctrl+k, Ctrl+i, Ctrl+l: Easier navigation between splits.
 * Alt+s, Alt+v: Creates horizontal and vertical splits.
 * Alt+j, Alt+k, Alt+i, Alt+l: Changes size of splits.
-* Alt+c: Runs PymodeLint to check Python code against PEP8.
 
 ## Additional Settings
 * The .vimrc file contains various settings for syntax highlighting, code navigation, and other features.
