@@ -291,22 +291,23 @@ let python_highlight_builtins=0
 let python_slow_sync=1
 let g:syntastic_python_checkers = ['flake8', 'python']
 let g:syntastic_python_flake8_args='--ignore=E121,E128,E711,E301,E261,E241,E124,E126,E721
-\ --max-line-length=80'
+    \ --max-line-length=80'
+
 autocmd FileType python setlocal completeopt-=preview
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
-\ formatoptions+=croq softtabstop=4 smartindent
-\ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 
-\ smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+    \ formatoptions+=croq smartindent
+    \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 
+    \ smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 
 " --- Languages support ---
 
 " C/C++/C# 
-autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType objc setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType cs setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType c setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType cpp setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType objc setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType cs setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType c setlocal commentstring=/*\ %s\ */
 autocmd FileType cpp,cs,objc setlocal commentstring=//\ %s
 let c_no_curly_error=1
@@ -337,7 +338,7 @@ autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 let html_no_rendering=1
 let g:syntastic_html_checkers = []
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
 
 " Jinja 
@@ -357,22 +358,22 @@ autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " YAML 
 autocmd BufNewFile,BufRead *.sls setlocal ft=yaml
-autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " TXT 
 autocmd BufRead,BufNewFile *.txt set filetype=txt
-autocmd FileType txt setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType txt setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " MD 
 autocmd BufRead,BufNewFile *.md set filetype=md
-autocmd FileType md setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType md setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Unix.conf 
 autocmd BufRead,BufNewFile *.conf set filetype=conf
-autocmd FileType conf setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType conf setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Vim
-autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=2
+autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 
 " --- User hotkeys ---
