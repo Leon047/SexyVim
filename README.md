@@ -13,52 +13,50 @@
 
 ## Vundle Vim Configuration
 
-This README provides documentation for the Vundle Vim configuration provided in the `.vimrc` file.
+> This README provides documentation for the Vundle Vim configuration provided in the `.vimrc` file.
 
 ## Installation
 
-1. Inasll Vim
+1. Inasll Vim:
   ```bash
   sudo apt install vim
   ```
 
-2. Get vimrc
+2. Get vimrc:
   ```bash
   git clone https://github.com/Leon047/SexyVim.git && mv SexyVim/.vimrc ~/ && rm -rf SexyVim 
   ```
 
-3. Swaps and backups (optional)
+3. Create swaps and backups (optional):
   ```bash
   mkdir ~/.vim/sessions
   ```
 
-4. Support virtualenv (optional) for use 'virtualenvwrapper'. 
+4. Support virtualenv (optional) for use 'virtualenvwrapper':
   ```bash
   mkdir ~/.virtualenvs
   ```
 
-5. Add Vundle 
+5. Install Vundle:
   ```bash
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ```
 
-6. Majutsushi/tagbar
+6. Install exuberant-ctags for Tagbar:
   ```bash
   sudo apt install exuberant-ctags
   ```
 
-7. Launch Vim and run ':' to install all the plugins specified in the configuration.
+7. Launch Vim and run :PluginInstall to install all the specified plugins:
   ```bash
   PluginInstall
   ```
 
 ## Plugin List
-This configuration uses several plugins managed by Vundle to enhance your Vim experience:
 
 * Vundle (gmarik/Vundle.vim): Manages plugins within Vim.
 
 ### Code/Project Navigation
-
 * NERDTree (scrooloose/nerdtree): A tree explorer plugin for Vim.
 * Unite.vim (Shougo/unite.vim): Enables navigation between buffers and files.
 * Tagbar (majutsushi/tagbar): Provides a class/module browser.
@@ -102,25 +100,30 @@ This configuration uses several plugins managed by Vundle to enhance your Vim ex
 * F2: Toggles Tagbar to show a class/module browser.
 * F3: Opens Unite buffer to navigate through currently opened buffers.
 * F4: Aligns indents in the current code.
-* F5: Opens ConqueTerm split for running Python scripts.
-* F6: Saves and performs Syntastic syntax checking.
-* F8: Python code check on PEP8
-* Ctrl+Space: Activates autocompletion.
-* Ctrl+z: Undo, Crtl+r: Redu
-* CTRL-s: saving, also in Insert mode.
-* CTRL-a: Is select all.
-* Ctrl+j, Ctrl+k, Ctrl+i, Ctrl+l: Easier navigation between splits.
-* Alt+s, Alt+v: Creates horizontal and vertical splits.
-* Alt+j, Alt+k, Alt+i, Alt+l: Changes size of splits.
+* F5: Syntastic syntax checking.
+* F8: Python code check on PEP8.
+* Ctrl-j: Move block down.
+* Ctrl-k: Move block up.
+* Ctrl-z: Undo. 
+* Ctrl-r: Redo.
+* Ctrl-a: Select all.
+* Ctrl-s: Saving, also in Insert mode.
+* Ctrl-Space: Activates autocompletion.
+* Shift-q: Close current buffer.
+* Shift-Right: Move to next buffer `->`.
+* Shift-Left: Move to previous buffer `<-`.
 
 ## Additional Settings
 * The .vimrc file contains various settings for syntax highlighting, code navigation, and other features.
-* Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML, JSON and more languages are supported with specific settings.
+* Specific settings are defined for Python, JavaScript, TypeScript, HTML, CSS, SASS, YAML, JSON, and more languages.
 * Airline theme is set to powerlineish.
 * Indentation settings are defined for different filetypes.
-* Various mappings for easier movement, saving, and navigating between buffers and splits are provided.
+* Various mappings are provided for easier movement, saving, and navigating between buffers and splits.
 
 For more details and specific usage instructions, refer to the comments in the .vimrc file.
 
 This documentation provides an overview of the plugins, settings, hotkeys, and languages supported by the Vundle Vim configuration. 
 Users can follow the installation instructions and explore the various features and enhancements offered by this configuration.
+
+## License
+This project is licensed under the MIT License
